@@ -12,6 +12,12 @@ package adt;
  * This will serve as the template for the Doubly-Linked List.
  */
 public interface ListADT<E> {
+    /**
+     * This method will add the item in the list.
+     *
+     * @param item the item to be added in the list.
+     * @return true when the item adds to the list.
+     */
     boolean add(E item);
 
     E remove();
