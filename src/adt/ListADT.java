@@ -20,6 +20,11 @@ public interface ListADT<E> {
      */
     boolean add(E item);
 
+    /**
+     * This method will remove an item from the linked list.
+     *
+     * @return the "data" of the node removed from the end of the 'Doubly-Linked List'.
+     */
     E remove();
 
     int search(E item);
