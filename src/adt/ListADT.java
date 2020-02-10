@@ -39,4 +39,10 @@ public interface ListADT<E> {
      * This method will sort the list based on their nodes' data in ascending order.
      */
     void sort();
+
+    /*
+     * Developer's Note:
+     * I am not making the print method here because the definition class will simply
+     * override the Object class's toString() method and define the functionality there.
+     * */
 }
