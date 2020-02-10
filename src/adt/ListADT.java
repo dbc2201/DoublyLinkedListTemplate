@@ -7,5 +7,5 @@
 
 package adt;
 
-public interface ListADT {
+public interface ListADT<E> {
 }
