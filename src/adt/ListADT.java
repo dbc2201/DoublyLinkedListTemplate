@@ -13,4 +13,6 @@ public interface ListADT<E> {
     E remove();
 
     int search(E item);
+
+    void sort();
 }
