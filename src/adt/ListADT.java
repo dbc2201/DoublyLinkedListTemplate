@@ -7,6 +7,10 @@
 
 package adt;
 
+/**
+ * This is the Interface for the List ADT.
+ * This will serve as the template for the Doubly-Linked List.
+ */
 public interface ListADT<E> {
     boolean add(E item);
 
