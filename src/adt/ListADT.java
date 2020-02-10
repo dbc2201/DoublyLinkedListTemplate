@@ -27,6 +27,12 @@ public interface ListADT<E> {
      */
     E remove();
 
+    /**
+     * This method will search an item in the list.
+     *
+     * @param item the item to be searched inside the list.
+     * @return the assumed 'index' at which the item was found in the linked list.
+     */
     int search(E item);
 
     void sort();
