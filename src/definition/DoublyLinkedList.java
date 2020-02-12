@@ -7,5 +7,5 @@
 
 package definition;
 
-public class DoublyLinkedList {
+public class DoublyLinkedList<E> {
 }
