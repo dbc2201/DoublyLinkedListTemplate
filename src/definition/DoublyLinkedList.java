@@ -15,6 +15,17 @@ import adt.ListADT;
  * be implemented here.
  */
 public class DoublyLinkedList<E> implements ListADT<E> {
+
+    /*
+     * The linked list class has two 'extra' nodes at all times that actually do not
+     * store any data like the other nodes but are actually necessary for the operations
+     * of the linked list class. These nodes are the 'head', and the 'tail' node.
+     * They are reference variables and hence only store references to other 'data' nodes.
+     * */
+
+    private Node<E> head = null;
+    private Node<E> tail = null;
+
     @Override
     public boolean add(E item) {
         return false;
