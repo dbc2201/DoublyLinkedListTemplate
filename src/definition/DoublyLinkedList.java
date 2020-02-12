@@ -9,6 +9,11 @@ package definition;
 
 import adt.ListADT;
 
+/**
+ * This is our definition class for a Double Linked List.
+ * The actual Node class (generic) and all the methods (API) of the linked list will
+ * be implemented here.
+ */
 public class DoublyLinkedList<E> implements ListADT<E> {
     @Override
     public boolean add(E item) {
