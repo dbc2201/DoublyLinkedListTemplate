@@ -34,4 +34,16 @@ public class DoublyLinkedList<E> implements ListADT<E> {
     public void sort() {
 
     }
+
+    /**
+     * This is the actual Node class.
+     * It is defined generic so that our Node could store a data of 'any' type.
+     * This will serve as the blueprint of a node in our double linked list.
+     * A node of a double linked list contains three fields:
+     * 1. A 'data' variable to store the actual data of the node.
+     * 2. A 'previous' reference variable to store the reference of the previous node.
+     * 3. A 'next' reference variable to store the reference to the next node.
+     */
+    private static class Node<E> {
+    }
 }
