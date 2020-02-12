@@ -45,5 +45,8 @@ public class DoublyLinkedList<E> implements ListADT<E> {
      * 3. A 'next' reference variable to store the reference to the next node.
      */
     private static class Node<E> {
+        private E data;
+        private Node<E> previous;
+        private Node<E> next;
     }
 }
