@@ -48,5 +48,11 @@ public class DoublyLinkedList<E> implements ListADT<E> {
         private E data;
         private Node<E> previous;
         private Node<E> next;
+
+        private Node(E data, Node<E> previous, Node<E> next) {
+            this.data = data;
+            this.previous = previous;
+            this.next = next;
+        }
     }
 }
