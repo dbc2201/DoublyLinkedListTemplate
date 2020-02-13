@@ -49,6 +49,17 @@ public class DoublyLinkedList<E> implements ListADT<E> {
 
     }
 
+    /*
+     * This toString() method will allow us to print the whole linked list with just
+     * sending an object of this list as a parameter to the System.out.print() method.
+     * */
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("[");
+        sb.append("]");
+        return sb.toString();
+    }
+
     /**
      * This is the actual Node class.
      * It is defined generic so that our Node could store a data of 'any' type.
