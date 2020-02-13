@@ -92,7 +92,13 @@ public class DoublyLinkedList<E> implements ListADT<E> {
 
         // check if the 'nextNode' is null, that would mean the 'node' is the last node of the linked list.
         if (nextNode == null) {
-
+            /*
+             * create the new node, set the data 'item'
+             * set the previous to node [node <-- newNode]
+             * set the next to null [newNode --> null]
+             * node <--> newNode --> null
+             * */
+            Node<E> newNode = new Node<>(item, node, null);
         }
         return true;
     }
