@@ -33,7 +33,7 @@ public class DoublyLinkedList<E> implements ListADT<E> {
      * This method will add the first node in the linked list when the list is empty.
      *
      * @param item the data that is to be stored in the node.
-     * @return true when the node is added in the linked list.
+     * @return true when the node adds in the linked list.
      */
     private boolean addFirst(E item) {
         return true;
