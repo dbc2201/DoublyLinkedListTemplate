@@ -70,6 +70,9 @@ public class DoublyLinkedList<E> implements ListADT<E> {
             // append the data to the string builder object
             sb.append(data);
 
+            // append the commas after the data
+            sb.append(i < size - 1 ? ", " : "");
+
             // change the reference of the temp variable to the next node.
             currentNode = currentNode.getNext();
         }
