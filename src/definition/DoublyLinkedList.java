@@ -80,6 +80,15 @@ public class DoublyLinkedList<E> implements ListADT<E> {
      * @return true when the node adds to the linked list.
      */
     private boolean addAfter(Node<E> node, E item) {
+        /*
+         * Fetch the next node of the given node.
+         * The current arrangement in the linked list is like this
+         * node <--> nextNode
+         * We will create a new node [newNode] and add it after 'node' such that the
+         * arrangement looks like this
+         * node <--> newNode <--> nextNode
+         * */
+        Node<E> nextNode = node.getNext();
         return true;
     }
 
