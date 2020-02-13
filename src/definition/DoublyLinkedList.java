@@ -40,8 +40,21 @@ public class DoublyLinkedList<E> implements ListADT<E> {
         Node<E> node;
         // check if the linked list is empty
         if (head == null) {
-
+            /*
+             * Since this is the first node in the list, and the current values of head and tail are
+             * null, the steps are:
+             * 1. Create the node with the data 'item'.
+             * 2. Set node.previous to null [new Node<>(item, -->head<--, tail);].
+             * 3. Set node.next to null [new Node<>(item, head, -->tail<--);].
+             * 4. Make the head refer to this new node [head = node].
+             * 5. Make the tail refer to this node [tail = node].
+             * 6. Increase the size of the linked list.
+             * */
+            node = new Node<>(item, head, tail);
+            head = node;
+            tail = node;
         }
+        size++;
         return true;
     }
 
