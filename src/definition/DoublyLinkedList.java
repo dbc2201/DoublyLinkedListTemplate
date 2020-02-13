@@ -151,6 +151,8 @@ public class DoublyLinkedList<E> implements ListADT<E> {
     public boolean add(int index, E item) throws IndexOutOfBoundsException {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            return addFirst(item);
         }
         return true;
     }
