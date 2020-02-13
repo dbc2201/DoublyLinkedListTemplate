@@ -23,11 +23,21 @@ public class DoublyLinkedList<E> implements ListADT<E> {
      * They are reference variables and hence only store references to other 'data' nodes.
      * */
 
+    // we will also store the current size of the linked list in an integer variable
+    int size = 0;
     private Node<E> head = null;
     private Node<E> tail = null;
 
-    // we will also store the current size of the linked list in an integer variable
-    int size = 0;
+    /**
+     * This is a private helper method.
+     * This method will add the first node in the linked list when the list is empty.
+     *
+     * @param item the data that is to be stored in the node.
+     * @return true when the node is added in the linked list.
+     */
+    private boolean addFirst(E item) {
+        return true;
+    }
 
     @Override
     public boolean add(E item) {
