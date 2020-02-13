@@ -73,18 +73,6 @@ public class DoublyLinkedList<E> implements ListADT<E> {
 
     /**
      * This is a private helper method.
-     * This method will return a node from the linked list based off of its 'assumed' index.
-     *
-     * @param index index of the node starting from 0
-     * @return the node at the given index
-     */
-    private Node<E> getNode(int index) {
-        Node<E> response = head;
-        return response;
-    }
-
-    /**
-     * This is a private helper method.
      * This method will add a new node after a given node.
      *
      * @param node the after which a new node is to be added.
@@ -134,6 +122,21 @@ public class DoublyLinkedList<E> implements ListADT<E> {
         // increase the size of the linked list
         size++;
         return true;
+    }
+
+    /**
+     * This is a private helper method.
+     * This method will return a node from the linked list based off of its 'assumed' index.
+     *
+     * @param index index of the node starting from 0
+     * @return the node at the given index
+     */
+    private Node<E> getNode(int index) {
+        Node<E> response = head;
+        for (int i = 0; i < index && response != null; i++) {
+            response = response.getNext();
+        }
+        return response;
     }
 
     @Override
