@@ -44,15 +44,28 @@ public class DoublyLinkedList<E> implements ListADT<E> {
              * Since this is the first node in the list, and the current values of head and tail are
              * null, the steps are:
              * 1. Create the node with the data 'item'.
-             * 2. Set node.previous to null [new Node<>(item, -->head<--, tail);].
-             * 3. Set node.next to null [new Node<>(item, head, -->tail<--);].
+             * 2. Set node.previous to null [new Node<>(item, -->null<--, null);].
+             * 3. Set node.next to null [new Node<>(item, null, -->null<--);].
              * 4. Make the head refer to this new node [head = node].
-             * 5. Make the tail refer to this node [tail = node].
+             * 5. Make the tail refer to this new node [tail = node].
              * 6. Increase the size of the linked list.
              * */
-            node = new Node<>(item, head, tail);
+            node = new Node<>(item, null, null);
             head = node;
             tail = node;
+        } else {
+            /*
+             * In this case, the head is not null, so it means that there are some nodes
+             * present in the linked list. The steps are:
+             * 1. Create the node with the data 'item'.
+             * 2. Set the node.previous to null [new Node<>(item, -->null<--, head)].
+             * 3. Set the node.next to head [new Node<>(item, null, -->head<--)].
+             * 4. Set the head.previous to this new node [head.previous = node].
+             * 5. Make the head refer to this new node [head = node].
+             * */
+            node = new Node<>(item, null, head);
+            head.previous = node;
+            head = node;
         }
         size++;
         return true;
