@@ -26,6 +26,9 @@ public class DoublyLinkedList<E> implements ListADT<E> {
     private Node<E> head = null;
     private Node<E> tail = null;
 
+    // we will also store the current size of the linked list in an integer variable
+    int size = 0;
+
     @Override
     public boolean add(E item) {
         return false;
