@@ -139,6 +139,18 @@ public class DoublyLinkedList<E> implements ListADT<E> {
         return response;
     }
 
+    /**
+     * This is a public helper method, this will be exposed to other classes.
+     * This method will add a new node at a specified index.
+     *
+     * @param index the index at which the new node is to be added.
+     * @param item  the data of the node to be added.
+     * @return true when the node adds to the linked list.
+     */
+    public boolean add(int index, E item) {
+        return true;
+    }
+
     @Override
     public boolean add(E item) {
         return false;
