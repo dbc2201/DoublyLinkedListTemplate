@@ -89,6 +89,11 @@ public class DoublyLinkedList<E> implements ListADT<E> {
          * node <--> newNode <--> nextNode
          * */
         Node<E> nextNode = node.getNext();
+
+        // check if the 'nextNode' is null, that would mean the 'node' is the last node of the linked list.
+        if (nextNode == null) {
+
+        }
         return true;
     }
 
