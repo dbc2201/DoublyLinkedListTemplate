@@ -96,10 +96,19 @@ public class DoublyLinkedList<E> implements ListADT<E> {
              * create the new node, set the data 'item'
              * set the previous to node [node <-- newNode]
              * set the next to null [newNode --> null]
+             * set node.next = newNode [node --> newNode]
              * node <--> newNode --> null
+             * make the tail node refer to this node. [tail = newNode;].
+             *          tail --|
+             *                 V
+             * node <-->    newNode <--> null
              * */
             Node<E> newNode = new Node<>(item, node, null);
+            node.next = newNode;
+            tail = newNode;
         }
+        // increase the size of the linked list
+        size++;
         return true;
     }
 
