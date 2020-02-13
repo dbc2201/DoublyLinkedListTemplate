@@ -71,6 +71,14 @@ public class DoublyLinkedList<E> implements ListADT<E> {
         return true;
     }
 
+    /**
+     * This is a private helper method.
+     * This method will add a new node after a given node.
+     */
+    private boolean addAfter(Node<E> node, E item) {
+        return true;
+    }
+
     @Override
     public boolean add(E item) {
         return false;
