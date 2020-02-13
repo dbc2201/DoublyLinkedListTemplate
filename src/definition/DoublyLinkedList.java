@@ -62,9 +62,12 @@ public class DoublyLinkedList<E> implements ListADT<E> {
          * So, we can traverse this linked list without actually disturbing the actual reference of the
          * head node or the references of the data nodes in the list.
          * */
-        Node<E> temp = head;
-        for (int i = 0; i < size && temp != null; i++) {
-            temp = temp.getNext();
+        Node<E> currentNode = head;
+        for (int i = 0; i < size && currentNode != null; i++) {
+            // fetch the data from the current node.
+            E data = currentNode.getData();
+            // change the reference of the temp variable to the next node.
+            currentNode = currentNode.getNext();
         }
         sb.append("]");
         return sb.toString();
