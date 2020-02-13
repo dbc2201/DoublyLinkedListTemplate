@@ -63,6 +63,9 @@ public class DoublyLinkedList<E> implements ListADT<E> {
          * head node or the references of the data nodes in the list.
          * */
         Node<E> temp = head;
+        for (int i = 0; i < size && temp != null; i++) {
+            temp = temp.getNext();
+        }
         sb.append("]");
         return sb.toString();
     }
