@@ -38,6 +38,10 @@ public class DoublyLinkedList<E> implements ListADT<E> {
     private boolean addFirst(E item) {
         // create a node that will store the data 'item'
         Node<E> node;
+        // check if the linked list is empty
+        if (head == null) {
+
+        }
         return true;
     }
 
