@@ -36,6 +36,8 @@ public class DoublyLinkedList<E> implements ListADT<E> {
      * @return true when the node adds in the linked list.
      */
     private boolean addFirst(E item) {
+        // create a node that will store the data 'item'
+        Node<E> node;
         return true;
     }
 
