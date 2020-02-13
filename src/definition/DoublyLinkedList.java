@@ -56,6 +56,13 @@ public class DoublyLinkedList<E> implements ListADT<E> {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("[");
+        /*
+         * Create a temporary node that has the reference value of the head node.
+         * This means, temp is now also referring to the node that head was referring earlier.
+         * So, we can traverse this linked list without actually disturbing the actual reference of the
+         * head node or the references of the data nodes in the list.
+         * */
+        Node<E> temp = head;
         sb.append("]");
         return sb.toString();
     }
