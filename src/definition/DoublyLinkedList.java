@@ -160,7 +160,7 @@ public class DoublyLinkedList<E> implements ListADT<E> {
 
     @Override
     public boolean add(E item) {
-        return false;
+        return add(size, item);
     }
 
     @Override
