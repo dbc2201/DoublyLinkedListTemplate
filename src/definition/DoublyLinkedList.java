@@ -146,8 +146,12 @@ public class DoublyLinkedList<E> implements ListADT<E> {
      * @param index the index at which the new node is to be added.
      * @param item  the data of the node to be added.
      * @return true when the node adds to the linked list.
+     * @throws IndexOutOfBoundsException when the index is out of range (index < 0 || index > size).
      */
-    public boolean add(int index, E item) {
+    public boolean add(int index, E item) throws IndexOutOfBoundsException {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        }
         return true;
     }
 
