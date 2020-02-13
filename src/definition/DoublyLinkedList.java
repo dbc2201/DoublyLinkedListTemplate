@@ -66,6 +66,10 @@ public class DoublyLinkedList<E> implements ListADT<E> {
         for (int i = 0; i < size && currentNode != null; i++) {
             // fetch the data from the current node.
             E data = currentNode.getData();
+
+            // append the data to the string builder object
+            sb.append(data);
+
             // change the reference of the temp variable to the next node.
             currentNode = currentNode.getNext();
         }
